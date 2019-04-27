@@ -1,11 +1,9 @@
 <template>
-  <div id="app">
-    <router-view />
-  </div>
+  <div>这里是列表页</div>
 </template>
 <script>
 export default {
-  name: 'App'
+  name: 'List'
 }
 
 </script>
