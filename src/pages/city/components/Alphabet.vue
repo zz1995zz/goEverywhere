@@ -1,17 +1,8 @@
 <template>
   <ul class="list">
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
+    <li class='item' v-for="(item,index) of cities" :key='index'>
+      {{index}}
+    </li>
   </ul>
 </template>
 
@@ -19,6 +10,9 @@
 <script>
 export default {
 name:'CityAlphabet',
+props:{
+  cities:Object
+}
 };	
 </script>
 <style lang="stylus" scoped>
@@ -33,7 +27,7 @@ name:'CityAlphabet',
   bottom:0
   width:.4rem
   .item
-    line-height:.5rem
+    line-height:.4rem
     text-align:center
     color:$bgColor
 </style>
