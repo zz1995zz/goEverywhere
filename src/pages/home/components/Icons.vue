@@ -21,7 +21,6 @@ data() {
 	return {
 		swiperOption: {
         pagination: '.swiper-pagination',
-        loop:true,
        },
 		iconsList:[
 		{
