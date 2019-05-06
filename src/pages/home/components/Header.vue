@@ -7,10 +7,12 @@
     	<span class="iconfont">&#xe632;</span>
     	旅游信息/酒店/景点
 	</div>
-    <div class="header-right">
+    <router-link to='/city'>
+    	<div class="header-right">
     	{{city}}
     	<span class="iconfont arrow-icon">&#xe64a;</span>
 	</div>
+    </router-link>
   </div>
 </template>
 <script>
@@ -25,9 +27,9 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
 .header
-	display flex
-	line-height .86rem
-	height:.86rem
+	display:flex
+	line-height:$headerHeight
+	height:$headerHeight
 	background : $bgColor
 	color:#fff
 	.header-left
@@ -49,7 +51,8 @@ export default {
 	.header-right
 		width:1.28rem
 		float:right
-		text-align center
+		text-align:center
+		color:#fff
 		.arrow-icon
 			margin-left:-.04rem
 			font-size:.24rem	
