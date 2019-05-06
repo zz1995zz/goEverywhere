@@ -8,14 +8,17 @@
     	旅游信息/酒店/景点
 	</div>
     <div class="header-right">
-    	城市
+    	{{city}}
     	<span class="iconfont arrow-icon">&#xe64a;</span>
 	</div>
   </div>
 </template>
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props:{
+  	city:String
+  }
 };
 </script>
 
