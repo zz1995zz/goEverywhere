@@ -5,7 +5,7 @@
     <div class="banner-info">
       <div class="banner-title">云雾山(AAAAA景区)</div>
       <div class="banner-number">
-      	<span class="iconfont">&#xe61e;</span>
+        <span class="iconfont">&#xe61e;</span>
         19
       </div>
     </div>
@@ -62,6 +62,8 @@ export default {
 	  color:#fff
 	  padding:0 .2rem
 	  box-sizing:border-box
+	  background-image:linear-gradient(top, rgba(0,0,0,0),
+	  		rgba(0,0,0,.8))
 	  .banner-title
 	  	flex:1
 	  	font-size:.32rem
