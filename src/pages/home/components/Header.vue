@@ -50,7 +50,8 @@ export default {
 		line-height :.64rem
 		padding-left:.2rem
 	.header-right
-		width:1.28rem
+		min-width:1.08rem
+		padding-left:.1rem
 		float:right
 		text-align:center
 		color:#fff

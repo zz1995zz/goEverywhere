@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <router-view />
+  	<!-- keep-alive性能优化 -->
+    <keep-alive>
+    	<router-view />
+    </keep-alive>
   </div>
 </template>
 <script>
