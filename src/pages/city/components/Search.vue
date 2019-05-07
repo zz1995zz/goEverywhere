@@ -8,6 +8,7 @@
         <li 
         class="search-item border-bottom"
         v-for='item of list'
+        @click='handleCityClick(item)'
         >{{item}}</li>
         <li v-show='hasNoData' class="search-item border-bottom">没有搜索到该数据</li>
       </ul>
@@ -37,6 +38,12 @@ computed:{
     return !this.list.length
   }
 
+},
+methods:{
+  handleCityClick (city){
+    this.$store.dispatch('changeCity',city)
+    this.$router.push('/')
+  }
 },
 watch:{
   keyWord (){
