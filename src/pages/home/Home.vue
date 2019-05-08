@@ -38,7 +38,7 @@ export default {
   },
   methods:{
     getHomeInfo() {
-      axios.get('https://easy-mock.com/mock/5cd2cc415110c02a69f7b506/goEverywhere-show/index.json/index.json?city='+this.city)
+      axios.get('https://easy-mock.com/mock/5cd2cc415110c02a69f7b506/goEverywhere-show/index.json?city='+this.city)
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc(res) {

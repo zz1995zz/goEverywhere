@@ -34,7 +34,7 @@ export default {
   },
   methods:{
     getDtailInfo (){
-      axios.get('https://easy-mock.com/mock/5cd2cc415110c02a69f7b506/goEverywhere-show/detail.json/detail.json',{
+      axios.get('https://easy-mock.com/mock/5cd2cc415110c02a69f7b506/goEverywhere-show/detail.json',{
         params:{
           id:this.$route.params.id
         }
