@@ -2,15 +2,16 @@
   <div>
     <div 
     class="item border-bottom"
-    v-for='(item,index) of lists'
+    v-for='(item,index) of categoryList'
     :key='index'
     >
       <div class="item-title">
         <span class="item-title-icon"></span>
         {{item.title}}
       </div>
+      <!-- 递归组件实现分级列表 -->
       <div v-if='item.children'>
-        <detail-list :lists='item.children'></detail-list>
+        <detail-list :categoryList='item.children'></detail-list>
       </div>
     </div>
   </div>
@@ -20,7 +21,7 @@
 export default {
   name: 'DetailList',
   props:{
-    lists:Array
+    categoryList:Array
   }
 };
 </script>

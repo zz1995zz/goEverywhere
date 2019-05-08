@@ -36,7 +36,6 @@ export default {
   },
   methods:{
     handleScorollTop (){
-      console.log('scroll')
       const scrollTop=document.documentElement.scrollTop
       if(scrollTop>50){
         const opacity=scrollTop/140
