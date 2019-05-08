@@ -36,6 +36,7 @@ export default {
   },
   methods:{
     handleScorollTop (){
+      console.log('scroll')
       const scrollTop=document.documentElement.scrollTop
       if(scrollTop>50){
         const opacity=scrollTop/140
@@ -48,7 +49,10 @@ export default {
   },
   activated (){
     window.addEventListener('scroll',this.handleScorollTop)
-
+  },
+  deactivated (){
+    // 解绑全局事件
+    window.removeEventListener('scroll',this.handleScorollTop)
   }
 };
 </script>
