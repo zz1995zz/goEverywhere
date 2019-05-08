@@ -36,7 +36,10 @@ export default {
   },
   methods:{
     handleScorollTop (){
-      const scrollTop=document.documentElement.scrollTop
+      // pc端chrom只识别了document.documentElement.scrollTop
+      //移动端chrom只识别了document.body.scrollTop
+      //很奇怪啊？？？
+      const scrollTop=document.body.scrollTop || document.documentElement.scrollTop
       if(scrollTop>50){
         const opacity=scrollTop/140
         this.opacityStyle.opacity=opacity>140?1:opacity
@@ -46,10 +49,10 @@ export default {
       }
     }
   },
-  activated (){
+  created (){
     window.addEventListener('scroll',this.handleScorollTop)
   },
-  deactivated (){
+  beforeDestroy (){
     // 解绑全局事件
     window.removeEventListener('scroll',this.handleScorollTop)
   }

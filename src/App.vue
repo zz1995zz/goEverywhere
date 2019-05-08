@@ -1,7 +1,7 @@
 <template>
   <div id="app">
   	<!-- keep-alive性能优化 -->
-    <keep-alive>
+    <keep-alive exclude="Detail">
     	<router-view />
     </keep-alive>
   </div>

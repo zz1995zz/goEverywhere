@@ -11,6 +11,10 @@ export default new Router({
   {
     path: '/',
     name: 'Home',
+    // 当项目较大的时候可以用异步加载组件
+    // 项目小的时候不用，
+    // 因为这时由于异步加载多发送的http请求消耗的性能远多于一次性加载全部app.js
+    // component: () => import('@/pages/home/Home')
     component: Home
   },
   {
@@ -23,5 +27,8 @@ export default new Router({
     name: 'Detail',
     component: Detail
   }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+  return { x: 0, y: 0 }
+}
 })

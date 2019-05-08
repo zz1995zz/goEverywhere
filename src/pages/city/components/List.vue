@@ -75,7 +75,10 @@ methods:{
   ...mapMutations(['changeCity'])
 },
 mounted (){
-  this.scroll=new BScroll(this.$refs.wrapper)
+  this.scroll=new BScroll(this.$refs.wrapper,{
+    // better-scroll要支持点击需设置click:true
+    click:true
+  })
 }
 
 };	
